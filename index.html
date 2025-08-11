@@ -1,0 +1,313 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CV - Djenaba Diallo Cosa</title>
+    <!-- Importation de la police et des icônes -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    
+    <style>
+        /* --- Styles Généraux --- */
+        :root {
+            --primary-color: #2c3e50; /* Bleu nuit */
+            --secondary-color: #3498db; /* Bleu clair */
+            --light-gray: #f4f4f4;
+            --dark-gray: #333333;
+            --text-color: #555;
+            --white: #ffffff;
+            --border-color: #e0e0e0;
+        }
+
+        body {
+            font-family: 'Lato', sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: var(--light-gray);
+            color: var(--text-color);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .cv-container {
+            width: 100%;
+            max-width: 900px;
+            background-color: var(--white);
+            margin: 2rem;
+            box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+            border-radius: 10px;
+            overflow: hidden;
+            display: flex;
+            flex-direction: row;
+        }
+
+        /* --- Colonne de Gauche (Aside) --- */
+        .left-column {
+            background-color: var(--primary-color);
+            color: var(--white);
+            padding: 2rem;
+            width: 35%;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+
+        .profile-pic-container {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            overflow: hidden;
+            border: 5px solid var(--secondary-color);
+            margin-bottom: 1.5rem;
+        }
+
+        .profile-pic-container img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        .left-column h2 {
+            color: var(--white);
+            border-bottom: 2px solid var(--secondary-color);
+            padding-bottom: 0.5rem;
+            margin-top: 1.5rem;
+            margin-bottom: 1rem;
+            width: 100%;
+            text-align: left;
+        }
+
+        .contact-info ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        .contact-info li {
+            margin-bottom: 0.8rem;
+            display: flex;
+            align-items: center;
+        }
+
+        .contact-info i {
+            width: 20px;
+            margin-right: 10px;
+            color: var(--secondary-color);
+            text-align: center;
+        }
+
+        .skills ul, .languages ul, .interests ul {
+            list-style: none;
+            padding: 0;
+        }
+        
+        .skills li {
+            background-color: rgba(255, 255, 255, 0.1);
+            padding: 0.5rem 0.8rem;
+            border-radius: 5px;
+            margin-bottom: 0.5rem;
+            font-size: 0.9rem;
+        }
+
+        .languages p {
+            margin: 0.5rem 0;
+        }
+
+        .interests ul li {
+             margin-bottom: 0.5rem;
+        }
+
+        /* --- Colonne de Droite (Main) --- */
+        .right-column {
+            padding: 2.5rem;
+            width: 65%;
+        }
+
+        .header {
+            margin-bottom: 2rem;
+            padding-bottom: 1.5rem;
+            border-bottom: 3px solid var(--secondary-color);
+        }
+
+        .header h1 {
+            color: var(--primary-color);
+            margin: 0;
+            font-size: 2.8rem;
+            font-weight: 700;
+        }
+
+        .header h3 {
+            color: var(--secondary-color);
+            margin: 0.5rem 0 0;
+            font-size: 1.2rem;
+            font-weight: 400;
+        }
+
+        .section {
+            margin-bottom: 2rem;
+        }
+
+        .section-title {
+            color: var(--primary-color);
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            border-bottom: 2px solid var(--light-gray);
+            padding-bottom: 0.5rem;
+        }
+
+        .section p {
+            line-height: 1.6;
+        }
+        
+        .timeline-item {
+            margin-bottom: 1.5rem;
+        }
+
+        .timeline-item h4 {
+            margin: 0;
+            color: var(--dark-gray);
+            font-size: 1.1rem;
+        }
+        
+        .timeline-item-subtitle {
+            margin: 0.2rem 0;
+            color: var(--secondary-color);
+            font-weight: bold;
+        }
+
+        .timeline-item-date {
+            color: var(--text-color);
+            font-size: 0.9rem;
+            font-style: italic;
+        }
+
+        /* --- Responsive Design --- */
+        @media (max-width: 768px) {
+            .cv-container {
+                flex-direction: column;
+                margin: 0;
+                border-radius: 0;
+            }
+            .left-column, .right-column {
+                width: 100%;
+                box-sizing: border-box;
+            }
+            .header h1 {
+                font-size: 2rem;
+            }
+        }
+
+    </style>
+</head>
+<body>
+
+    <div class="cv-container">
+        <!-- Colonne de Gauche -->
+        <aside class="left-column">
+            <div class="profile-pic-container">
+                <!-- Remplacez par une URL de photo réelle -->
+                <img src="photo.JPEG" alt="Photo de profil">
+            </div>
+            
+            <div class="contact-info">
+                <h2>Contact</h2>
+                <ul>
+                    <li><i class="fas fa-phone"></i> +224 621 09 78 25</li>
+                    <li><i class="fas fa-envelope"></i> djenadiallo528@gmail.com</li>
+                    <li><i class="fas fa-map-marker-alt"></i> Cosa/Ratoma, Conakry</li>
+                    <li><i class="fas fa-map-marker-alt"></i> www.linkedin.com/in/djenaba-diallo-75153833b</li>
+                </ul>
+            </div>
+
+            <div class="skills">
+                <h2>Compétences</h2>
+                <ul>
+                    <li>Développement Web (HTML, CSS, JS)</li>
+                    <li>Wordpress</li>
+                    <li>Réseaux & Programmation</li>
+                    <li>Suite Microsoft Office</li>
+                    <li>Photoshop & Illustrator</li>
+                    <li>Comptabilité & Gestion</li>
+                </ul>
+            </div>
+
+            <div class="languages">
+                <h2>Langues</h2>
+                <p><strong>Français:</strong> Courant</p>
+                <p><strong>Poular:</strong> Langue maternelle</p>
+                <p><strong>Anglais:</strong> Intermédiaire</p>
+            </div>
+
+            <div class="interests">
+                <h2>Centres d'intérêt</h2>
+                <ul>
+                    <li><i class="fas fa-book-open"></i> Lecture</li>
+                    <li><i class="fas fa-running"></i> Sport</li>
+                </ul>
+            </div>
+        </aside>
+
+        <!-- Colonne de Droite -->
+        <main class="right-column">
+            <header class="header">
+                <h1>Djenaba Diallo</h1>
+                <h3>Développeuse Web </h3>
+            </header>
+
+            <section class="section">
+                <h2 class="section-title">Profil</h2>
+                <p>
+                    Titulaire d'un diplôme en MIAGE, je suis passionnée par la création de solutions numériques. Je cherche à appliquer mes compétences en développement web pour concevoir des applications et des sites web concrets, performants et accessibles.
+                </p>
+            </section>
+
+            <section class="section">
+                <h2 class="section-title">Formation</h2>
+                <div class="timeline-item">
+                    <h4>Licence en MIAGE</h4>
+                    <p class="timeline-item-subtitle">Université Kofi Annan de Guinée</p>
+                    <p class="timeline-item-date">2020 - 2023</p>
+                </div>
+                 <div class="timeline-item">
+                    <h4>Formation en developpement web </h4>
+                    <p class="timeline-item-subtitle">Simplon Guinée</p>
+                    <p class="timeline-item-date">mai-septembre 2025</p>
+                </div>
+                <div class="timeline-item">
+                    <h4>Baccalauréat Unique</h4>
+                    <p class="timeline-item-subtitle">Safia École</p>
+                    <p class="timeline-item-date">2017 - 2019</p>
+                </div>
+                 <div class="timeline-item">
+                    <h4>Brevet d'études (BEPC)</h4>
+                    <p class="timeline-item-subtitle">Safia ecole</p>
+                    <p class="timeline-item-date">2016 - 2017</p>
+                </div>
+            </section>
+            
+            <section class="section">
+                <h2 class="section-title">Expérience Professionnelle</h2>
+                <div class="timeline-item">
+                    <h4>Refonte de site projet de classe</h4>
+                    <p class="timeline-item-subtitle">IRLA</p>
+                    <p>
+                        - Refonte complète d'un ancien site web afin d'améliorer l'experience utilisateur et l'aspect visuel. <br>
+                        - Le projet a suivi une démarche centrée utilisateur:
+                        - Création de userflows pour définir les parcours de navigation.
+                        - Réalisation de wireframes pour structurer les pages avant développement.
+                        - Conception d'un design moderne respectant l'identité visuelle du client.
+                        - Developpement avec HTML et CSS. 
+                    </p>
+                </div>
+                <!-- Ajoutez d'autres expériences ici -->
+            </section>
+
+        </main>
+    </div>
+
+</body>
+</html>
